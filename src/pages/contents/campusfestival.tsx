@@ -144,6 +144,7 @@ export default function SingWithAGuitar() {
                             <Image src={purple02
                             } alt="" width={purple02.width} height={purple02.height} className="absolute bottom-0 scale-x-[-1] -z-20" />
                         </div>
+
                     </div>
                 </div>
             </div>

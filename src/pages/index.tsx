@@ -58,7 +58,9 @@ export default function Home() {
         <Image src={beige.src} alt="" width={beige.width} height={beige.height} className="absolute top-[0rem]" />
       </div>
     </div >
-    <div className="h-[20rem]">
+    <div className="h-[15rem]">
+      <h1>今後もこの調子で活動していくので<br />
+        応援よろしくお願いします!</h1>
 
     </div>
   </>)

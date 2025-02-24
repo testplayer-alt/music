@@ -5,8 +5,9 @@ import purple from "@/components/images/purple.png";
 import purple02 from "@/components/images/purple02.png";
 import tiktok from "@/components/images/tiktok.png";
 import work from "@/components/images/workshop.png";
-import workyousu from "@/components/images/workyousu.png";
-import workyousu2 from "@/components/images/workyousu2.png";
+import star from "@/components/images/starjaket.png"
+import bodyjaket from "@/components/images/celestivalbody.png"
+import dosei from "@/components/images/dosei.png"
 import {
     Card,
     CardContent,
@@ -15,42 +16,73 @@ import {
 import Link from "next/link";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Workshop() {
+    const music1 = "/music/music2.mp3";
+    const music2 = "/music/music3.mp3";
+    const [videoSources, setVideoSources] = useState<string | undefined>(undefined);
+    useEffect(() => {
+        setVideoSources("https://firebasestorage.googleapis.com/v0/b/lightmusic-6f4f6.firebasestorage.app/o/workshop.mp4?alt=media&token=299f5ce7-ad2d-4fbe-ba5b-3672a3ff03f5")
+    }, []);
     return (<>
         <div className=" m-auto h-fit relative z-10">
             <div id="">
                 <div className="w-full">
-                    <div className="grid grid-cols-[repeat(9,minmax(0,1fr))] grid-rows-9 p-[2%] border-[#cdcdcd relative overflow-hidden">
+                    <div className="grid grid-cols-[repeat(8,minmax(0,1fr))] grid-rows-11 p-[2%] border-[#cdcdcd relative overflow-hidden">
                         <Image src={purple} alt="" width={purple.width} height={purple.height} className=" absolute top-[0px] scale-x-[-1] scale-y-[-1] -z-20" />
-                        <section className=" col-span-9 row-span-2 place-content-center place-items-center">
+                        <section className=" col-span-8 row-span-2 place-content-center place-items-center">
                             <Image src={work} alt="" width={work.width} height={work.height} />
                         </section>
-                        <section className=" col-span-9 row-span-1 place-items-center place-content-center">
+                        <section className=" col-span-8 row-span-1 place-items-center place-content-center">
                             <h2 className="subbigtitle">生成AIを使用し、音楽制作を行うワークショップを実施しました!</h2>
                             <a href="https://creevo-music.com/composition/select-type" target="_blank" className=" font-bold text-[#4046ff] hover:border-b-2 border-[#4046ff]">
                                 使用した生成AI
                             </a>
                         </section>
-                        <section className=" col-span-9 row-span-1 justify-center items-end place-items-center place-content-center" >
+                        <section className=" col-span-8 row-span-1 justify-center items-end place-items-center place-content-center" >
                             <h1>ワークショップの様子</h1>
                         </section>
-                        <section className=" col-span-1 row-span-3" />
                         {[
-                            { src: workyousu },
-                            { src: workyousu2 },
+                            { src: videoSources },
                         ].map((video, index) => (
-                            <>
-                                <section key={index} className="col-span-3 row-span-4 flex justify-center">
-                                    <div className="text-center">
-                                        <Image src={video.src} alt="" width={video.src.width} height={video.src.height} className="h-[70vh] w-full object-cover" />
-                                    </div>
-                                </section>
-                                {index === 0 && <section className="col-span-1 row-span-2" />}
-                            </>
-
+                            <div className=" col-span-8 row-span-3" key={index}>
+                                {video.src && (
+                                    <video
+                                        style={{ width: "max(24vh, 24vw)" }}
+                                        className="m-[0.3vw] rounded-[0.3vw] z-10 mx-auto"
+                                        src={video.src}
+                                        controls
+                                    />
+                                )}
+                            </div>
                         ))}
-                        <section className=" col-span-1 row-span-3" />
+                        <section className=" col-span-8 row-span-1 justify-center items-end place-items-center place-content-end" >
+                            <h1>ワークショップで制作された音楽</h1>
+                        </section>
+                        <section className=" col-span-1 row-span-2" />
+                        <div className="col-span-3 row-span-2 place-items-center grid grid-cols-1 grid-rows-1 mt-[2rem]">
+                            <section className=" " >
+                                <Image src={star} alt="" width={star.width} height={star.height} className=" w-[10em] border-2 border-[#000]" />
+                            </section>
+                            <section className="row-span-1 place-items-center" >
+                                <audio src={music1} controls />
+                            </section>
+                        </div>
+                        <div className="col-span-3 row-span-2 place-items-center grid grid-cols-1 grid-rows-1 mt-[2rem]">
+                            <section className=" " >
+                                <Image src={bodyjaket} alt="" width={bodyjaket.width} height={bodyjaket.height} className=" w-[10em] border-2 border-[#000]" />
+                            </section>
+                            <section className="row-span-1 place-items-center" >
+                                <audio src={music2} controls />
+                            </section>
+                        </div>
+                        <section className=" col-span-1 row-span-2" />
+                        <section className="col-span-8 row-span-1 place-content-center place-items-center">
+                            <h2 className="bigsubtitle">
+                                参加者の方から「楽しかった」という言葉をたくさんいただけて嬉しかったです
+                            </h2>
+                        </section>
                     </div>
                     <h1>他にもこんな活動をしています!</h1>
                     <div className="flex flex-wrap justify-center gap-4 w-[90%] m-auto">
