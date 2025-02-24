@@ -1,13 +1,12 @@
 "use client"; // クライアントコンポーネントとして明示
+import bodyjaket from "@/components/images/celestivalbody.png";
 import create from "@/components/images/create.png";
 import kyanfes from "@/components/images/kyanfes.png";
 import purple from "@/components/images/purple.png";
 import purple02 from "@/components/images/purple02.png";
+import star from "@/components/images/starjaket.png";
 import tiktok from "@/components/images/tiktok.png";
 import work from "@/components/images/workshop.png";
-import star from "@/components/images/starjaket.png"
-import bodyjaket from "@/components/images/celestivalbody.png"
-import dosei from "@/components/images/dosei.png"
 import {
     Card,
     CardContent,
