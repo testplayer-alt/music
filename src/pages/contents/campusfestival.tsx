@@ -16,7 +16,7 @@ import { useState } from "react";
 
 export default function SingWithAGuitar() {
     // 動画の `src` をクライアント側でセット
-    const [videoSources, setVideoSources] = useState({
+    const [videoSources] = useState({
         movie1: "https://firebasestorage.googleapis.com/v0/b/lightmusic-6f4f6.firebasestorage.app/o/nitijokakumei.mp4?alt=media&token=eb8dd141-0560-4c64-8e39-e4d6acbaff19",
         movie2: "https://firebasestorage.googleapis.com/v0/b/lightmusic-6f4f6.firebasestorage.app/o/music2.mp4?alt=media&token=718b0fe3-7453-4969-9e45-030414fb1f55",
         movie3: "https://firebasestorage.googleapis.com/v0/b/lightmusic-6f4f6.firebasestorage.app/o/anatanokoibito.mp4?alt=media&token=2258eeec-4a90-4d62-8980-7f5eb92aafbb",

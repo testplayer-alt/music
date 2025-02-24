@@ -14,12 +14,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-import { useState } from "react";
 export default function singwithaguitar() {
-    const [videoSources, setVideoSources] = useState({
-        movie1: "",
-        movie2: "",
-    });
     return (<>
         <div className=" m-auto h-fit relative z-10">
             <div id="">
