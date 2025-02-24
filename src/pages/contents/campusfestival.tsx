@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function SingWithAGuitar() {
     // 動画の `src` をクライアント側でセット
@@ -31,14 +32,15 @@ export default function SingWithAGuitar() {
                 <div id="singwithaguitar">
                     <div className="w-full">
                         <div className="grid grid-cols-[repeat(13,minmax(0,1fr))] grid-rows-11 p-[2%] border-[#cdcdcd] overflow-hidden relative">
-                            <img
-                                src={purple.src}
+                            <Image
+                                src={purple}
                                 alt=""
+                                width={purple.width} height={purple.height}
                                 className="absolute top-0 scale-x-[-1] scale-y-[-1] -z-20"
                             />
                             <section className="col-span-1 row-span-2" />
                             <section className="col-span-11 row-span-2 flex justify-center">
-                                <img src={kyanfes.src} alt="" />
+                                <Image src={kyanfes} alt="" width={kyanfes.width} height={kyanfes.height} />
                             </section>
                             <section className="col-span-1 row-span-2" />
                             <section className="col-span-1 row-span-1" />
@@ -120,13 +122,13 @@ export default function SingWithAGuitar() {
                             </div>
 
                             {[
-                                { title: "音楽制作", img: create.src, page: "/contents/createsong" },
-                                { title: "TikTok", img: tiktok.src, page: "/contents/tiktok" },
-                                { title: "ワークショップ", img: work.src, page: "/contents/workshop" },
+                                { title: "音楽制作", img: create, page: "/contents/createsong" },
+                                { title: "TikTok", img: tiktok, page: "/contents/tiktok" },
+                                { title: "ワークショップ", img: work, page: "/contents/workshop" },
                             ].map((item, index) => (
                                 <Card key={index} className="w-[30%] sm:w-[30%] md:w-[20%] lg:w-[18%] p-2 pb-[1%] m-[1%]">
                                     <CardContent className="p-4 py-[5vw]">
-                                        <img src={item.img} alt="" className="w-full rounded-lg h-[7vw] object-cover" />
+                                        <Image src={item.img} alt="" width={item.img.width} height={item.img.height} className="w-full rounded-lg h-[7vw] object-cover" />
                                     </CardContent>
                                     <CardFooter className="w-full flex justify-center">
                                         <Link
@@ -139,7 +141,8 @@ export default function SingWithAGuitar() {
                                 </Card>
                             ))}
 
-                            <img src={purple02.src} alt="" className="absolute bottom-0 scale-x-[-1] -z-20" />
+                            <Image src={purple02
+                            } alt="" width={purple02.width} height={purple02.height} className="absolute bottom-0 scale-x-[-1] -z-20" />
                         </div>
                     </div>
                 </div>

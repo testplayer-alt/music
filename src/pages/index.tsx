@@ -9,6 +9,8 @@ import blue from "@/components/images/bg_blue.png";
 import white from "@/components/images/bg_white.png";
 import yellow from "@/components/images/bg_yellow.png";
 
+import Image from "next/image";
+
 
 
 
@@ -23,8 +25,8 @@ export default function Home() {
       <div className="h-[100vh] w-full relative grid grid-rows-10">
         <p className="title w-fit grid place-items-center font-aoharu font-bold inset-auto m-auto row-span-10">けいおんサークル！</p>
       </div>
-      <img src={yellow.src} alt="" className=" absolute" />
-      <img id="activity" src={white.src} alt="" className=" relative top-0" />
+      <Image src={yellow.src} alt="" width={yellow.width} height={yellow.height} className=" absolute" />
+      <Image id="activity" src={white.src} alt="" width={white.width} height={white.height} className=" relative top-0" />
     </div>
     <div className=" bg-white h-fit pt-[2rem]">
       {[
@@ -52,8 +54,8 @@ export default function Home() {
 
 
       <div className="relative mb-[5rem]">
-        <img src={blue.src} alt="" className=" bodybottom pt-[6%]" />
-        <img src={beige.src} alt="" className="absolute top-[0rem]" />
+        <Image src={blue.src} alt="" width={blue.width} height={blue.height} className=" bodybottom pt-[6%]" />
+        <Image src={beige.src} alt="" width={beige.width} height={beige.height} className="absolute top-[0rem]" />
       </div>
     </div >
     <div className="h-[20rem]">

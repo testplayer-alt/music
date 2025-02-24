@@ -2,16 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'aoharu-marker-mini';
+  src: url('/fonts/aoharu-marker-mini.ttf') format('truetype');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: calc(1em + 1vw);
+}
+
+h1 {
+  font-size: calc(1em + 1vw);
+  text-align: center;
+  font-weight: bold;
+}
+
+.bigtitle {
+  font-weight: bolder;
+  font-size: calc(2em + 1vw);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.subbigtitle {
+  font-weight: bolder;
+  font-size: calc(1em + 0.8vw);
+  text-align: center;
+}
+
+.ButtonStyle {
+  font-weight: bold;
+  text-align: center;
+  width: max(10rem, 15vw);
+  padding: clamp(0.5rem, 1vw, 1.5rem);
+  border-radius: 0.5vw;
+  background-color: #18bfa0;
+  color: #f8f8f8;
+  margin: 0.2vw;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.35);
+  transition: 0.2s ease-in-out;
+}
+
+.ButtonStyle:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.35);
+  color: #e1e1e1;
+}
+
+
+.HeaderContents {
+  font-size: calc(0.3em + 0.7vw);
+  text-align: center;
+  width: 13vw;
+  padding: 1vw;
+  margin: 0.2vw;
+  color: #171717;
+}
+
+.title {
+  font-size: calc(1em + 3vw);
+}
+
+.titleimage {
+  width: calc(7em + 3vw);
+}
+
+.Mtitle {
+  font-size: calc(1em + 0.3vw);
+  font-weight: bold;
+}
+
+.creater {
+  font-size: calc(0.6em + 0.3vw);
+  font-weight: 100;
+}
+
+:root {
+  --background: #fff6e6;
+  --foreground: #171717;
 }
 
 body {
@@ -20,7 +92,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h2 {
+  font-weight: bold;
+  font-size: min(calc(1rem + 0.3vw), 2.5rem);
+}
 
+.subtitle {
+  font-size: min(calc(0.6rem + 0.4vw), 1.5rem);
+}
 
 @layer base {
   :root {
@@ -50,6 +129,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -78,12 +158,23 @@ body {
   }
 }
 
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
 
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
