@@ -19,7 +19,7 @@ import {
 import Link from "next/link";
 
 import { useState } from "react";
-export default function singwithaguitar() {
+export default function Tictok() {
     const [videoSources] = useState({
         movie1: "https://firebasestorage.googleapis.com/v0/b/lightmusic-6f4f6.firebasestorage.app/o/tiktoi1.mp4?alt=media&token=a22efb8f-86eb-4d7b-8102-fc5f9da6bd88",
         movie2: "https://firebasestorage.googleapis.com/v0/b/lightmusic-6f4f6.firebasestorage.app/o/tiktok2.mp4?alt=media&token=bf5bfc98-7299-4120-923e-bd7929d49f0e",

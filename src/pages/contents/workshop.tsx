@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-export default function singwithaguitar() {
+export default function Workshop() {
     return (<>
         <div className=" m-auto h-fit relative z-10">
             <div id="">

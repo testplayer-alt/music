@@ -29,8 +29,8 @@ export default function Home() {
     <div className=" bg-white h-fit pt-[2rem]">
       {[
         { src: videoSources },
-      ].map((video) => (
-        <div className="text-center my-[3rem]">
+      ].map((video, index) => (
+        <div className="text-center my-[3rem]" key={index}>
           <h1>サークル紹介映像</h1>
           {video.src && (
             <video
