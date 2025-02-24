@@ -22,7 +22,7 @@ export default function singwithaguitar() {
     });
     return (<>
         <div className=" m-auto h-fit relative z-10">
-            <div id="singwithaguitar">
+            <div id="">
                 <div className="w-full">
                     <div className="grid grid-cols-[repeat(9,minmax(0,1fr))] grid-rows-9 p-[2%] border-[#cdcdcd relative overflow-hidden">
                         <img src={purple.src} alt="" className=" absolute top-[0px] scale-x-[-1] scale-y-[-1] -z-20" />

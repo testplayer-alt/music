@@ -29,7 +29,7 @@ export default function Home() {
     <div className=" bg-white h-fit pt-[2rem]">
       {[
         { src: videoSources },
-      ].map((video, index) => (
+      ].map((video) => (
         <div className="text-center my-[3rem]">
           <h1>サークル紹介映像</h1>
           {video.src && (
@@ -47,8 +47,6 @@ export default function Home() {
         <h1>軽音サークルではこんな活動をしています!</h1>
         <Buttons></Buttons>
         <div className="mt-[3%] text-center">
-          {/*<video className="h-[50vh] w-auto m-auto" src={movie1} controls autoPlay />*/}
-          {/*<video className="h-[50vh] w-auto" src={movie2} controls autoPlay />*/}
         </div>
       </div>
 
