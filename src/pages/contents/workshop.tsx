@@ -14,15 +14,17 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
+import Image from "next/image";
+
 export default function Workshop() {
     return (<>
         <div className=" m-auto h-fit relative z-10">
             <div id="">
                 <div className="w-full">
                     <div className="grid grid-cols-[repeat(9,minmax(0,1fr))] grid-rows-9 p-[2%] border-[#cdcdcd relative overflow-hidden">
-                        <img src={purple.src} alt="" className=" absolute top-[0px] scale-x-[-1] scale-y-[-1] -z-20" />
+                        <Image src={purple} alt="" width={purple.width} height={purple.height} className=" absolute top-[0px] scale-x-[-1] scale-y-[-1] -z-20" />
                         <section className=" col-span-9 row-span-2 place-content-center place-items-center">
-                            <img src={work.src} alt="" />
+                            <Image src={work} alt="" width={work.width} height={work.height} />
                         </section>
                         <section className=" col-span-9 row-span-1 place-items-center place-content-center">
                             <h2 className="subbigtitle">生成AIを使用し、音楽制作を行うワークショップを実施しました!</h2>
@@ -41,7 +43,7 @@ export default function Workshop() {
                             <>
                                 <section key={index} className="col-span-3 row-span-4 flex justify-center">
                                     <div className="text-center">
-                                        <img src={video.src.src} alt="" className="h-[70vh] w-full object-cover" />
+                                        <Image src={video.src} alt="" width={video.src.width} height={video.src.height} className="h-[70vh] w-full object-cover" />
                                     </div>
                                 </section>
                                 {index === 0 && <section className="col-span-1 row-span-2" />}
@@ -59,13 +61,13 @@ export default function Workshop() {
                         </div>
 
                         {[
-                            { title: "キャンフェス", img: kyanfes.src, page: "/contents/campusfestival" },
-                            { title: "音楽制作", img: create.src, page: "/contents/createsong" },
-                            { title: "TikTok", img: tiktok.src, page: "/contents/tiktok" },
+                            { title: "キャンフェス", img: kyanfes, page: "/contents/campusfestival" },
+                            { title: "音楽制作", img: create, page: "/contents/createsong" },
+                            { title: "TikTok", img: tiktok, page: "/contents/tiktok" },
                         ].map((item, index) => (
                             <Card key={index} className="w-[30%] sm:w-[30%] md:w-[20%] lg:w-[18%] p-2 pb-[1%] m-[1%]">
                                 <CardContent className="p-4 py-[5vw]">
-                                    <img src={item.img} alt="" className="w-full rounded-lg h-[7vw] object-cover" />
+                                    <Image src={item.img} alt="" width={item.img.width} height={item.img.height} className="w-full rounded-lg h-[7vw] object-cover" />
                                 </CardContent>
                                 <CardFooter className="w-full flex justify-center">
                                     <Link
@@ -78,7 +80,7 @@ export default function Workshop() {
                             </Card>
                         ))}
                     </div>
-                    <img src={purple02.src} alt="" className=" absolute bottom-[0px] scale-x-[-1] -z-20" />
+                    <Image src={purple02.src} alt="" width={purple02.width} height={purple02.height} className=" absolute bottom-[0px] scale-x-[-1] -z-20" />
                 </div>
             </div>
         </div >
