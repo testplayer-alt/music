@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 export default function singwithaguitar() {
     const [videoSources, setVideoSources] = useState({
         movie1: "https://firebasestorage.googleapis.com/v0/b/lightmusic-6f4f6.firebasestorage.app/o/tiktoi1.mp4?alt=media&token=a22efb8f-86eb-4d7b-8102-fc5f9da6bd88",

@@ -1,28 +1,20 @@
 "use client"; // クライアントコンポーネントとして明示
-import dosei from "@/components/images/dosei.png"
-import noimage from "@/components/images/noimage.png"
-import purple from "@/components/images/purple.png"
-import purple02 from "@/components/images/purple02.png"
-import kyanfes from "@/components/images/kyanfes.png";
 import create from "@/components/images/create.png";
+import kyanfes from "@/components/images/kyanfes.png";
+import purple from "@/components/images/purple.png";
+import purple02 from "@/components/images/purple02.png";
 import tiktok from "@/components/images/tiktok.png";
-import tiktokicon from "@/components/images/tiktokicon.png"
 import work from "@/components/images/workshop.png";
-import workyousu from "@/components/images/workyousu.png"
-import workyousu2 from "@/components/images/workyousu2.png"
-import {
-    Avatar,
-    AvatarFallback,
-    AvatarImage,
-} from "@/components/ui/avatar"
+import workyousu from "@/components/images/workyousu.png";
+import workyousu2 from "@/components/images/workyousu2.png";
 import {
     Card,
     CardContent,
     CardFooter
-} from "@/components/ui/card"
-import Link from "next/link"
+} from "@/components/ui/card";
+import Link from "next/link";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 export default function singwithaguitar() {
     const [videoSources, setVideoSources] = useState({
         movie1: "",

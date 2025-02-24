@@ -1,18 +1,18 @@
 "use client"; // クライアントコンポーネントとして明示
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import create from "@/components/images/create.png";
+import kyanfes from "@/components/images/kyanfes.png";
+import purple from "@/components/images/purple.png";
+import purple02 from "@/components/images/purple02.png";
+import tiktok from "@/components/images/tiktok.png";
+import work from "@/components/images/workshop.png";
 import {
     Card,
     CardContent,
     CardFooter,
 } from "@/components/ui/card";
-import purple from "@/components/images/purple.png";
-import purple02 from "@/components/images/purple02.png";
-import kyanfes from "@/components/images/kyanfes.png";
-import create from "@/components/images/create.png";
-import tiktok from "@/components/images/tiktok.png";
-import work from "@/components/images/workshop.png";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function SingWithAGuitar() {
     // 動画の `src` をクライアント側でセット
