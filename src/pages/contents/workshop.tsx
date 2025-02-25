@@ -35,7 +35,7 @@ export default function Workshop() {
                         </section>
                         <section className=" col-span-8 row-span-1 place-items-center place-content-center">
                             <h2 className="subbigtitle">生成AIを使用し、音楽制作を行うワークショップを実施しました!</h2>
-                            <a href="https://creevo-music.com/composition/select-type" target="_blank" className=" font-bold text-[#4046ff] hover:border-b-2 border-[#4046ff]">
+                            <a href="https://creevo-music.com/composition/select-type" target="_blank" className=" font-bold text-[#4046ff] border-b-2 border-[#4046ff]">
                                 使用した生成AI
                             </a>
                         </section>

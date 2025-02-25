@@ -36,7 +36,7 @@ export default function Tictok() {
                         </section>
                         <section className=" col-span-10 row-span-1 place-items-center place-content-center">
                             <h2 className="subbigtitle">TikTokに歌ってみたなどを投稿しています!</h2>
-                            <a href="https://www.tiktok.com/@kobakaku2006?_t=ZS-8u9sYkeZgPq&_r=1" target="_blank" className=" font-bold text-[#4046ff] hover:border-b-2 border-[#4046ff] flex">
+                            <a href="https://www.tiktok.com/@kobakaku2006?_t=ZS-8u9sYkeZgPq&_r=1" target="_blank" className=" font-bold text-[#4046ff] border-b-2 border-[#4046ff] flex">
                                 TikTokアカウント
                                 <Avatar className=" h-[2.3vw] m-auto">
                                     <AvatarImage src={tiktokicon.src} alt="@shadcn" />
